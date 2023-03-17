@@ -7,11 +7,11 @@ static const unsigned int gappx     = 10;        /* gaps between windows */
 static const int vertpad            = 10;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
-static const int user_bh            = 26;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 35;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Symbols Nerd Font Mono:size=10" , "CaskaydiaCove Nerd Font Mono:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Symbols Nerd Font Mono:size=15" , "CaskaydiaCove Nerd Font Mono:size=15" };
+static const char dmenufont[]       = "monospace:size=15";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -77,7 +77,7 @@ static const char *rofi[] = { "rofi", "-show", "drun", "-show-emojis", NULL};
 static const char *rofi_power_menu[] = {"rofi" , "-show", "power-menu", "-modi", "power-menu:rofi-power-menu", NULL};
 static const char *browser[] = {"firefox", NULL};
 static const char *screenshot[] = { "/bin/sh", "-c", "maim ~/screenshots/$(date +%F-%H_%M_%S).png", NULL };
-static const char *snip[] = { "/bin/sh", "-c", "maim -s ~/screenshots/$(date +%F-%H_%M_%S).png","|","xclip", "-selection clipboard", "-t image/png", NULL };
+static const char *snip[] = { "/bin/sh", "-c", "maim -s | tee ~/screenshots/$(date +%F-%H_%M_%S).png | xclip -selection clipboard -t image/png", NULL };
 static const char *active_window_screenshot[] = { "/bin/sh", "-c", "maim -i $(xdotool getactivewindow) ~/screenshots/$(date +%F-%H_%M_%S).png", NULL };
 
 #include <X11/XF86keysym.h>
