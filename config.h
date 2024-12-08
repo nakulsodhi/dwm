@@ -64,8 +64,8 @@ static char *colors[][3]      = {
 	[SchemeInfoSel]  = { selfgcolor, normbgcolor,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm]  = { normfgcolor, normbgcolor,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
-#define TERMINAL "st"
-#define TERMCLASS "St"
+#define TERMINAL "kitty"
+#define TERMCLASS "kitty"
 /* tagging */
 static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
 
